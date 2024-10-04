@@ -1,0 +1,84 @@
+.auth-sort {
+    color: #163E6C;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    width: 350px;
+    align-self: center;
+    margin-bottom: 30px;
+}
+
+.auth-sort > .auth-heading {
+    margin: 0;
+}
+
+.auth-sort > .auth-sort-form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+}
+
+.sort-form-input {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    font-size: 18px;
+}
+
+.sort-form-input > label {
+    font-weight: bold;
+}
+
+.sort-form-input > select {
+    font-size: 18px;
+    border: 1px solid #163E6C;
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: #163E6C;
+}
+
+.auth-sort > button {
+    background-color: #D20A11;
+    color: #EBE6D6;
+    border: 0;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 15px;
+    margin: 0 auto;
+    width: 300px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+@media screen and (min-width: 1400px) {
+    .sort-form-input > label {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .sort-form-input > label,
+    .sort-form-input > select,
+    .auth-sort > button {
+        font-size: 16px;
+    }
+
+    .auth-sort > button {
+        width: 250px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .sort-form-input > label,
+    .sort-form-input > select,
+    .auth-sort > button {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .auth-sort {
+        width: 100%;
+    }
+}

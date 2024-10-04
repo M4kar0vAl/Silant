@@ -1,0 +1,37 @@
+.loader {
+    grid-area: loader;
+    border: 10px solid #163E6C;
+    border-radius: 50%;
+    border-top: 10px solid #D20A11;
+    width: 60px;
+    height: 60px;
+    -webkit-animation: spin 1s linear infinite; /* Safari */
+    animation: spin 1s linear infinite;
+    margin: 0 auto;
+}
+
+.loader-light {
+    border: 10px solid #EBE6D6;
+    border-top: 10px solid #D20A11;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

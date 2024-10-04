@@ -1,0 +1,17 @@
+.create-page-container {
+    padding: 30px 100px;
+    min-height: calc(100vh - (145px * 2));
+    color: #163E6C;
+}
+
+@media screen and (max-width: 1000px) {
+    .create-page-container {
+        padding: 30px 50px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .create-page-container {
+        padding: 20px 5px;
+    }
+}

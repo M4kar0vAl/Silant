@@ -1,0 +1,234 @@
+.create-title {
+    font-size: 40px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.create-form {
+    background-color: #EBE6D6;
+    border: 1px solid #163E6C;
+    border-radius: 10px;
+    padding: 20px;
+    font-size: 18px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr auto;
+    grid-template-areas:
+                    "required required unrequired unrequired"
+                    ". tip tip ."
+                    ". button button .";
+    column-gap: 20px;
+}
+
+.create-required-fields {
+    grid-area: required;
+    padding: 0 40px;
+}
+
+.create-required-fields label {
+    position: relative;
+}
+
+.create-required-fields label::after {
+    content: '*';
+    color: #D20A11;
+    margin-left: 5px;
+    position: absolute;
+    font-size: 22px;
+}
+
+.create-unrequired-fields {
+    grid-area: unrequired;
+    padding: 0 40px;
+}
+
+.create-form-input {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.create-form-input > input,
+.create-form-input > select {
+    font-size: 16px;
+    padding: 5px 10px;
+    font-family: 'PT-Astra-Sans';
+    border: 1px solid #163E6C;
+    border-radius: 5px;
+    color: #163E6C;
+    max-width: 400px;
+    min-width: 200px;
+}
+
+.create-form-input > input.error,
+.create-form-input > select.error {
+    color: #D20A11;
+    border: 1px solid #D20A11;
+}
+
+.create-form-input > p.error {
+    color: #D20A11;
+    font-size: 16px;
+    margin-top: 5px;
+    font-weight: bold;
+    font-style: italic;
+    text-align: center;
+    max-width: 400px;
+}
+
+.create-form-input > label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    width: max-content;
+}
+
+.create-form > button {
+    grid-area: button;
+    width: 250px;
+    height: 40px;
+    background-color: #D20A11;
+    color: #EBE6D6;
+    border: 0;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 0.02em;
+    cursor: pointer;
+    margin: 20px auto;
+}
+
+.create-form > button:disabled {
+    opacity: 60%;
+}
+
+.create-form-tip {
+    grid-area: tip;
+    font-size: 16px;
+    font-style: italic;
+    margin: 0 auto;
+}
+
+@media screen and (min-width: 1400px) {
+    .create-title {
+        font-size: 44px
+    }
+
+    .create-form {
+        font-size: 22px;
+    }
+
+    .create-form-input {
+        margin-bottom: 20px;
+    }
+
+    .create-form-input > label {
+        margin-bottom: 10px;
+    }
+
+    .create-form-input > input,
+    .create-form-input > select {
+        font-size: 20px;
+    }
+
+    .create-required-fields,
+    .create-unrequired-fields {
+        justify-self: center;
+    }
+
+    .create-form > button {
+        width: 350px;
+        font-size: 20px;
+        height: 60px;
+    }
+
+    .create-form-tip {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .create-form {
+        font-size: 16px;
+        column-gap: 0;
+    }
+
+    .create-form-input > input,
+    .create-form-input > select {
+        font-size: 14px;
+    }
+
+    .create-form-input > p.error {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .create-form {
+        font-size: 18px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr auto auto;
+        grid-template-areas:
+                    "required required"
+                    "unrequired unrequired"
+                    "tip tip"
+                    "button button";
+        justify-items: center;
+        align-items: center;
+        padding: 40px 20px;
+    }
+
+    .create-form-input > input,
+    .create-form-input > select {
+        font-size: 16px;
+        min-width: 350px;
+    }
+
+    .create-required-fields,
+    .create-unrequired-fields {
+        width: 100%;
+        padding: 0;
+        height: max-content;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .create-required-fields {
+        margin-bottom: 30px;
+    }
+
+    .create-form-tip {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .create-form {
+        font-size: 16px;
+        padding: 20px 10px;
+    }
+
+    .create-form-input > input,
+    .create-form-input > select {
+        font-size: 14px;
+        min-width: 250px;
+        width: 270px;
+    }
+
+    .create-form-input > p.error {
+        font-size: 12px;
+    }
+
+    .create-required-fields label::after {
+        font-size: 20px;
+        margin-left: 0;
+    }
+
+    .create-required-fields .create-form-input:last-child > input {
+        margin-left: 5px;
+    }
+
+    .create-title {
+        font-size: 36px;
+    }
+}

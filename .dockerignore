@@ -1,0 +1,11 @@
+venv
+__pycache__
+.idea
+README.md
+*.env
+compose.yaml
+.dockerignore
+.gitignore
+Dockerfile
+node_modules
+.git

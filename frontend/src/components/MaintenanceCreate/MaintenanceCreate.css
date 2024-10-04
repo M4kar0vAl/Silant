@@ -1,0 +1,88 @@
+.create-maintenance-form {
+    background-color: #EBE6D6;
+    border: 1px solid #163E6C;
+    border-radius: 10px;
+    padding: 20px;
+    font-size: 18px;
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 0.5fr;
+    grid-template-rows: 1fr auto auto;
+    grid-template-areas:
+                    ". required ."
+                    ". tip ."
+                    ". button .";
+}
+
+.create-maintenance-form > .create-required-fields {
+    width: 500px;
+}
+
+.create-maintenance-form > button {
+    grid-area: button;
+    width: 250px;
+    height: 40px;
+    background-color: #D20A11;
+    color: #EBE6D6;
+    border: 0;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 0.02em;
+    cursor: pointer;
+    margin: 20px auto;
+}
+
+.create-maintenance-form > button:disabled {
+    opacity: 60%;
+}
+
+@media screen and (min-width: 1400px) {
+    .create-maintenance-form {
+        font-size: 22px;
+    }
+
+    .create-maintenance-form > button {
+        width: 350px;
+        font-size: 20px;
+        height: 60px;
+    }
+}
+
+@media screen and (min-width: 1250px) and (max-width: 1399px) {
+    .create-maintenance-form > .create-required-fields {
+        width: 100%;
+    }
+
+    .create-maintenance-form > .create-required-fields .create-form-input,
+    .create-maintenance-form > .create-required-fields input,
+    .create-maintenance-form > .create-required-fields select {
+        width: 100%;
+        max-width: none;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .create-maintenance-form > .create-required-fields {
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .create-maintenance-form {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+                    "required"
+                    "tip"
+                    "button";
+    }
+
+    .create-maintenance-form > .create-required-fields {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .create-maintenance-form {
+        padding: 20px 5px;
+    }
+}

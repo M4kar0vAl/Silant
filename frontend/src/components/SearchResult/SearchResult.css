@@ -1,0 +1,146 @@
+.search-subtitle {
+    margin-bottom: 30px;
+    color: #163E6C;
+    font-size: 30px;
+}
+
+.search-not-found {
+    font-size: 24px;
+    color: #D20A11;
+    margin: auto;
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.toggle-btn-container {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+}
+
+.toggle-btn {
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px;
+    width: 150px;
+    background-color: #D20A11;
+    color: #EBE6D6;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    letter-spacing: 0.03em;
+}
+
+.toggle-btn:disabled {
+    background-color: #163E6C;
+}
+
+.add-btn {
+    font-size: 16px;
+    padding: 10px;
+    width: 350px;
+    height: 50px;
+    background-color: #D20A11;
+    color: #EBE6D6;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    letter-spacing: 0.01em;
+    margin: 0 auto 20px;
+}
+
+.btn {
+    font-size: 16px;
+    padding: 15px 10px;
+    background-color: #D20A11;
+    color: #EBE6D6;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    letter-spacing: 0.01em;
+    width: 250px;
+    margin: 0 0 10px auto;
+    /* margin-bottom: 10px; */
+}
+
+@media screen and (min-width: 1400px) {
+    .toggle-btn {
+        font-size: 16px;
+    }
+
+    .auth-filter {
+        font-size: 20px;
+    }
+
+    .auth-heading {
+        font-size: 28px;
+    }
+
+    .add-btn {
+        font-size: 18px;
+    }
+
+    .btn {
+        font-size: 18px;
+
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .search-subtitle {
+        font-size: 24px;
+    }
+
+    .search-not-found {
+        font-size: 20px;
+    }
+
+    .btn {
+        margin: 0 auto 10px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .search-subtitle {
+        font-size: 20px;
+    }
+
+    .search-not-found {
+        font-size: 18px;
+    }
+
+    .toggle-btn-container {
+        justify-content: space-between;
+    }
+
+    .toggle-btn {
+        font-size: 12px;
+        width: 90px;
+        padding: 10px 5px;
+    }
+
+    .add-btn {
+        font-size: 14px;
+    }
+
+    .btn {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .search-subtitle {
+        font-size: 18px;
+    }
+
+    .search-not-found {
+        font-size: 16px;
+    }
+
+    .add-btn {
+        width: 100%;
+    }
+}

@@ -1,0 +1,133 @@
+.create-catalog-title {
+    font-size: 40px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.create-catalog-form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    color: #163E6C;
+    background-color: #EBE6D6;
+    border: 1px solid #163E6C;
+    border-radius: 10px;
+    width: 600px;
+    font-size: 22px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.create-catalog-input {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.create-catalog-input > label {
+    font-weight: bold;
+}
+
+.create-catalog-input > input,
+.create-catalog-input > select,
+.create-catalog-input > textarea {
+    color: #163E6C;
+    font-family: 'PT-Astra-Sans';
+    font-size: 20px;
+    padding: 5px 10px;
+    border: 1px solid #163E6C;
+    border-radius: 5px;
+}
+
+.create-catalog-input > textarea {
+    resize: none;
+}
+
+.create-catalog-input > label::after {
+    content: '*';
+    color: #D20A11;
+    margin-left: 3px;
+}
+
+.create-catalog-input > input.error,
+.create-catalog-input > select.error,
+.create-catalog-input > textarea.error {
+    border: 1px solid #D20A11;
+    color: #D20A11;
+}
+
+.create-catalog-form > p.tip {
+    text-align: center;
+    font-size: 20px;
+}
+
+.create-catalog-form > p.tip > span {
+    color: #D20A11;
+}
+
+.create-catalog-form > button {
+    background-color: #D20A11;
+    color: #EBE6D6;
+    border: 0;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 0.02em;
+    cursor: pointer;
+    padding: 15px 10px;
+    width: 200px;
+    margin: 0 auto;
+}
+
+.create-catalog-form > button:disabled {
+    opacity: 60%;
+}
+
+@media screen and (min-width: 1400px) {
+    .create-catalog-title {
+        font-size: 44px;
+    }
+    
+    .create-catalog-form {
+        font-size: 24px;
+    }
+
+    .create-catalog-input > input,
+    .create-catalog-input > select,
+    .create-catalog-input > textarea,
+    .create-catalog-form > p.tip {
+        font-size: 22px;
+    }
+
+    .create-catalog-form > button {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .create-catalog-title {
+        font-size: 32px;
+    }
+    
+    .create-catalog-form {
+        width: 100%;
+        font-size: 20px;
+    }
+
+    .create-catalog-input > input,
+    .create-catalog-input > select,
+    .create-catalog-input > textarea,
+    .create-catalog-form > p.tip {
+        font-size: 18px;
+    }
+
+    .create-catalog-form > button {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .create-catalog-form {
+        padding: 10px;
+    }
+}

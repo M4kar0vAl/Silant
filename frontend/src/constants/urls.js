@@ -1,0 +1,10 @@
+export const BASE_URL = import.meta.env.VITE_BASE_URL
+export const LOGIN_URL = `${BASE_URL}/auth/login/`
+export const LOGOUT_URL = `${BASE_URL}/auth/logout/`
+export const USER_INFO_URL = `${BASE_URL}/user/me/`
+export const USERS_URL = `${BASE_URL}/user/`
+export const CATALOG_URL = `${BASE_URL}/catalog/`
+export const MACHINE_URL = `${BASE_URL}/machine/`
+export const MACHINE_CATALOG_URL = `${BASE_URL}/machine/catalog/`
+export const MAINTENANCE_URL = `${BASE_URL}/maintenance/`
+export const RECLAMATION_URL = `${BASE_URL}/reclamation/`

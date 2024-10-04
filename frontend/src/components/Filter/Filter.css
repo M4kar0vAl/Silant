@@ -1,0 +1,82 @@
+.auth-heading {
+    font-size: 26px;
+    margin-bottom: 15px;
+    text-align: center;
+    color: #163E6C;
+}
+
+.auth-filter {
+    font-size: 18px;
+    color: #163E6C;
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    align-self: center;
+    margin: 30px 0;
+}
+
+.auth-filter > label {
+    font-weight: bold;
+    margin-bottom: 10px;
+    width: max-content;
+}
+
+.auth-filter > select,
+.auth-filter > input {
+    border: 1px solid #163E6C;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-bottom: 15px;
+    color: #163E6C;
+    font-size: 18px;
+}
+
+.auth-filter > button {
+    background-color: #D20A11;
+    color: #EBE6D6;
+    border: 0;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 15px;
+    margin: 0 auto;
+    width: 250px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+@media screen and (max-width: 1000px) {
+    .auth-filter {
+        font-size: 16px;
+    }
+
+    .auth-filter > select,
+    .auth-filter > input {
+        font-size: 16px;
+    }
+
+    .auth-filter > button {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .auth-filter {
+        font-size: 14px;
+    }
+
+    .auth-filter > select,
+    .auth-filter > input {
+        font-size: 14px;
+    }
+
+    .auth-filter > button {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .auth-filter {
+        width: 100%;
+    }
+}

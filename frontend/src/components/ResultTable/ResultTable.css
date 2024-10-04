@@ -1,0 +1,66 @@
+.table-tip {
+    font-weight: bold;
+    font-style: italic;
+    font-size: 16px;
+    color: #163E6C;
+    margin-bottom: 10px;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+.search-table {
+    border-collapse: collapse;
+    border: 1px solid #163E6C;
+    color: #163E6C;
+    font-size: 16px;
+    min-width: 100%;
+}
+
+.search-table td,
+.search-table th {
+    border: 1px solid #163E6C;
+    padding: 5px;
+    text-align: center;
+    min-width: 130px;
+}
+
+.search-table .complectation-cell {
+    min-width: 150px;
+    text-align: start;
+    line-height: 1.3;
+}
+
+.search-table > tbody > tr {
+    cursor: pointer;
+}
+
+.search-table > tbody > tr:hover {
+    border: 3px solid #163E6C;
+}
+
+.search-table > tbody > tr.unclickable {
+    border: 1px solid #163E6C;
+    cursor: default;
+}
+
+@media screen and (min-width: 1400px) {
+    .search-table {
+        font-size: 18px;
+    }
+
+    .table-tip {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .search-table {
+        font-size: 14px;
+    }
+
+    .table-tip {
+        font-size: 14px;
+    }
+}
