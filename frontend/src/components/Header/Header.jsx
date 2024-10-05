@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 import { useAuth, useAuthDispatch, useCatalogDataDispatch, useTableDataDispatch, useUserDataDispatch } from '../../context'
 import { LOGOUT_URL } from '../../constants'
@@ -61,7 +61,7 @@ const Header = () => {
                         ?
                         <button className='auth-link' onClick={handleLogout}>Выйти</button>
                         :
-                        <a className='auth-link' href="/auth">Войти</a>
+                        <Link className='auth-link' to='/auth' >Войти</Link>
                     }
                 </div>
             </div>

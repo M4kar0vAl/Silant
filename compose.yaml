@@ -4,10 +4,12 @@ services:
     build: ./silant_backend
     env_file:
       - .env
-    depends_on:
-      silant_db:
-        condition: 'service_healthy'
-        restart: true
+#    depends_on:
+#      silant_db:
+#        condition: 'service_healthy'
+#        restart: true
+    volumes:
+      - ./silant_backend/db/db.sqlite3:/app/db/db.sqlite3
     ports:
       - 8000:8000
     networks:
@@ -27,28 +29,28 @@ services:
     networks:
       - silant_net
 
-  silant_db:
-    container_name: silant_db
-    image: postgres:16
-    environment:
-      - POSTGRES_DB=${DB_NAME}
-      - POSTGRES_USER=${DB_USER}
-      - POSTGRES_PASSWORD=${DB_PASS}
-    ports:
-      - 5432:5432
-    networks:
-      - silant_net
-    volumes:
-      - silant_data:/var/lib/postgresql/data
-    healthcheck:
-      test: [ "CMD-SHELL", "pg_isready -U ${DB_USER} -d ${DB_NAME}" ]
-      interval: 10s
-      retries: 5
-      start_period: 5s
-      timeout: 10s
+#  silant_db:
+#    container_name: silant_db
+#    image: postgres:16
+#    environment:
+#      - POSTGRES_DB=${DB_NAME}
+#      - POSTGRES_USER=${DB_USER}
+#      - POSTGRES_PASSWORD=${DB_PASS}
+#    ports:
+#      - 5432:5432
+#    networks:
+#      - silant_net
+#    volumes:
+#      - silant_data:/var/lib/postgresql/data
+#    healthcheck:
+#      test: [ "CMD-SHELL", "pg_isready -U ${DB_USER} -d ${DB_NAME}" ]
+#      interval: 10s
+#      retries: 5
+#      start_period: 5s
+#      timeout: 10s
 
 networks:
   silant_net:
 
-volumes:
-  silant_data:
+#volumes:
+#  silant_data:
