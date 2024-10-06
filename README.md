@@ -7,8 +7,8 @@
 
 ## Установка зависимостей
 
-> [!NOTE]
-> При запуске в докере можно пропустить этот шаг
+[//]: # (> [!NOTE])
+[//]: # (> При запуске в докере можно пропустить этот шаг)
 
 - Для бэкенда:
   1. Перейти в директорию `silant_backend`
@@ -19,12 +19,15 @@
 
 ## Запуск
 
-### В докере
+[//]: # (### В докере)
 
-1. Перейти в корень проекта
-2. Выполнить команду: `docker compose up -d --build`
+[//]: # ()
+[//]: # (1. Перейти в корень проекта)
 
-### Не в докере
+[//]: # (2. Выполнить команду: `docker compose up -d --build`)
+
+[//]: # ()
+[//]: # (### Не в докере)
 
 1. Запустить бэкенд:
    - Перейти в папку `silant_backend`
@@ -35,11 +38,13 @@
 
 ## Остановка
 
-### В докере
+[//]: # (### В докере)
 
-`docker compose down`
+[//]: # ()
+[//]: # (`docker compose down`)
 
-### Не в докере
+[//]: # ()
+[//]: # (### Не в докере)
 
 1. Остановить фронтенд:
    - В терминале, где он запущен нажать сочетание клавиш:
@@ -56,16 +61,23 @@
    - `DJANGO_SUPERUSER_USERNAME`
    - `DJANGO_SUPERUSER_EMAIL`
    - `DJANGO_SUPERUSER_PASSWORD`
-2. Выполнить команду:
-   - Если запущено в докере: `docker exec django python manage.py createsuperuser --noinput`
-   - Если запущено не в докере:
-     - Перейти в папку `silant_backend`
-     - Выполнить: `python manage.py createsuperuser --noinput`
+2. Перейти в папку `silant_backend`
+3. Выполнить команду: `python manage.py createsuperuser --noinput`
+
+[//]: # (   - Если запущено в докере: `docker exec django python manage.py createsuperuser --noinput`)
+
+[//]: # (   - Если запущено не в докере:)
+
+[//]: # (     - Перейти в папку `silant_backend`)
+
+[//]: # (     - Выполнить: `python manage.py createsuperuser --noinput`)
 
 ## Сайт
 
-- Если запущено в докере: **http://localhost/**
-- Если запущено не в докере: **http://localhost:5173/**
+**http://localhost:5173/**
+
+[//]: # (- Если запущено в докере: **http://localhost/**)
+[//]: # (- Если запущено не в докере: **http://localhost:5173/**)
 
 ## Админ-панель
 
